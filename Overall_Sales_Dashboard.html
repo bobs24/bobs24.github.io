@@ -4,6 +4,13 @@
     <title>Login Page</title>
     <!-- Add Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -45,7 +52,7 @@
                 var iframe = document.createElement('iframe');
                 iframe.src = 'https://app.powerbi.com/view?r=eyJrIjoiYzU0ODNmZWEtMGQyMC00NGM0LThjNDgtMzBhMzc1MTE5NDFmIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9';
                 iframe.style.width = '100%';
-                iframe.style.height = '650px'; // Set the desired height
+                iframe.style.height = (window.innerHeight + 35) + 'px'; // Adjust as needed
                 iframe.style.border = 'none';
                 document.body.innerHTML = ''; // Clear the login page
                 document.body.appendChild(iframe);
